@@ -100,7 +100,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
     private List<PaveTemptureData.DataBean> listData;
     private static final int FLING_MIN_DISTANCE = 20;
     private static final int FLING_MIN_VELOCITY = 200;
-    private ViewFlipper mFlipper;
+    private ViewFlipper mFlipper;  
     private GestureDetector mGestureDetector;
     private TextView tv_pave_temp_normal;
 
