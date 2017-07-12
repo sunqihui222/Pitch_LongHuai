@@ -57,7 +57,6 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
     @BindView(R.id.cl_login_fragment)
     CoordinatorLayout cl;
 
-
     private String username;
     private String password;
     private int fromTo;

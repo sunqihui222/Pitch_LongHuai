@@ -122,7 +122,6 @@ public class MarshallStabilityFragment extends BaseFragment<MarshallStabilityCon
         parametersData.biaoshiid = departmentBean.departmentID;
         parametersData.fromTo = Constants.MAESHALLFRAGMENT;
         departmentBean.fromto = Constants.MAESHALLFRAGMENT;
-        parametersData.deviceType = Constants.TYPE_MARSHALL;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

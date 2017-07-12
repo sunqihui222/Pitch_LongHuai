@@ -28,7 +28,7 @@ public class Constants {
 
 
     //测试地址
-    public static final String BASE_URL = "http://192.168.11.112:8080/gdnhmss/";
+    public static final String BASE_URL = "http://192.168.11.100:8888/gdnhmss/";
 
     //平台地址
 //    public static final String BASE_URL = "http://114.215.239.38:8082/yzgsmss/";//广东云湛高速
@@ -141,11 +141,10 @@ public class Constants {
     public  static final String  TYPE_WATERSTABILITY = "6";
     public  static final String  TYPE_PITCH="2";
     public  static final String  TYPE_PAVE="5";
-    public static final String TYPE_MARSHALL="9";
-    public static final String TYPE_RUANHUADIAN="10";
-    public static final String TYPE_ZHENRUDU="11";
-    public static final String TYPE_YANDU="12";
-    public static final String TYPE_LABORTORY="9,10,11,12";
+    public static final String TYPE_RUANHUADIAN="9";
+    public static final String TYPE_ZHENRUDU="10";
+    public static final String TYPE_YANDU="11";
+    public static final String TYPE_LABORTORY="9,10,11";
 
 
 

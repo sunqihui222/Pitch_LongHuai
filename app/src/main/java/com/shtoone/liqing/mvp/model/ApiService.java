@@ -199,7 +199,7 @@ public interface ApiService {
     Call<MarshallStabilityDetailBean> requestMarshallStabilityDetailBean(@QueryMap Map<String, String> map);
 
     //摊铺温度数据
-    @GET("app/tmpwenduchaxun?")
+    @GET("appXc/tmpwenduchaxun?")
     Call<PaveTemptureData> requestPaveTempData(@QueryMap Map<String, String> map);
 
     //软化度

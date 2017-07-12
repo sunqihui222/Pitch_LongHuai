@@ -154,6 +154,7 @@ public class PaveTemptureActivity extends BaseActivity<PaveTemptureContract.Pres
         setToolbarTitle();
         initToolbarBackNavigation(mToolbar);
         initPageStateLayout(mPageStateLayout);
+        initPtrFrameLayout(mPtrFrameLayout);
         mPageStateLayout.setPadding(0, 0, 0, DensityUtils.dp2px(this, 0));
         KLog.e(TAG,"-------initData--------");
 

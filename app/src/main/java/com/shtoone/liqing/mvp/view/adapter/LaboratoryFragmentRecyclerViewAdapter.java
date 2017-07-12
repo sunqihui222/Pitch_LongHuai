@@ -22,7 +22,6 @@ public class LaboratoryFragmentRecyclerViewAdapter extends BaseQuickAdapter<Labo
     @Override
     protected void convert(final BaseViewHolder holder, LaboratoryFragmentData.DataBean item) {
         holder.setText(R.id.tv_organization_item_recyclerview_laboratory_fragment, item.getBanhezhanminchen())
-                .setText(R.id.tv_maxier,item.getCountmxe())
                 .setText(R.id.tv_ruanhuadian,item.getCountrhd())
                 .setText(R.id.tv_zhenrudu,item.getCountzrd())
                 .setText(R.id.tv_yandu,item.getCountyd())

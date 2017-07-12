@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-import com.shtoone.liqing.exception.AppExceptionHandler;
 import com.shtoone.liqing.mvp.model.bean.DepartmentBean;
 import com.shtoone.liqing.mvp.model.bean.ParametersData;
 import com.shtoone.liqing.mvp.model.bean.UserInfoBean;
@@ -35,7 +34,7 @@ public class BaseApplication extends Application {
         KLog.e("baseapplication:"+BaseApplication.mDepartmentData);
         mContext = this;
         // 程序异常交由AppExceptionHandler来处理
-        Thread.setDefaultUncaughtExceptionHandler(AppExceptionHandler.getInstance(this));
+//        Thread.setDefaultUncaughtExceptionHandler(AppExceptionHandler.getInstance(this));
         MultiDex.install(this) ;
     }
 }

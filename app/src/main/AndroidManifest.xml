@@ -65,22 +65,6 @@
         </activity>
 
 
-        <!--<activity-->
-        <!--android:name=".mvp.view.WaterStability.TestActivity"-->
-        <!--android:launchMode="singleTop"-->
-        <!--android:theme="@style/AppTheme.LaunchTheme">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN" />-->
-
-        <!--<category android:name="android.intent.category.LAUNCHER" />-->
-        <!--</intent-filter>-->
-        <!--</activity>-->
-
-        <!-- 设置高德的key -->
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="8793aeb8a4d6e38a1fc8131be8fa19cf" />
-
         <activity
             android:name=".mvp.view.others.MainActivity"
             android:launchMode="singleTop"></activity>
@@ -99,7 +83,6 @@
             android:name=".mvp.view.others.DetailActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".mvp.view.pitch.PitchActivity" />
-        <activity android:name=".mvp.view.paveSite.DeviceLocationActivity" />
         <activity android:name=".mvp.view.endpress.EndpressTempActivity"/>
         <activity android:name=".mvp.view.pave.PaveTemptureActivity"/>
 

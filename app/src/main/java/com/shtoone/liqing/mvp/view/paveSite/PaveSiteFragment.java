@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class PaveSiteFragment extends BaseFragment<PaveSiteContract.Presenter> implements PaveSiteContract.View {
-    @BindViews({R.id.cv_location, R.id.cv_nianya, R.id.cv_pave_site})
+    @BindViews({R.id.cv_pave_speed, R.id.cv_pave_site})
     List<CardView> cardViewList;
     //    CardView cvLocation, cvNianYa, cvPaveSite;
     @BindView(R.id.toolbar_toolbar)
@@ -51,12 +51,8 @@ public class PaveSiteFragment extends BaseFragment<PaveSiteContract.Presenter> i
         toolbarToolbar.setTitle(sb.toString());
     }
 
-    @OnClick(R.id.cv_location)
-    void cv1OnClick() {
-        startActivity(new Intent(_mActivity, DeviceLocationActivity.class));
-    }
 
-    @OnClick(R.id.cv_nianya)
+    @OnClick(R.id.cv_pave_speed)
     void cv2OnClick(){
         startActivity(new Intent(_mActivity, EndpressTempActivity.class));
     }

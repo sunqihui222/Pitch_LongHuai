@@ -52,18 +52,16 @@ public class LaboratoryActivity extends BaseActivity {
         KLog.e(TAG,"departmentBean=:"+departmentBean.toString());
 
         if (savedInstanceState == null) {
-            mFragments[0] = MarshallStabilityFragment.newInstance(departmentBean);
-            mFragments[1] = SofteningPointFragment.newInstance(departmentBean);
-            mFragments[2] = AsphaltPenetrationFragment.newInstance(departmentBean);
-            mFragments[3] = DuctilityFragment.newInstance(departmentBean);
+            mFragments[0] = SofteningPointFragment.newInstance(departmentBean);
+            mFragments[1] = AsphaltPenetrationFragment.newInstance(departmentBean);
+            mFragments[2] = DuctilityFragment.newInstance(departmentBean);
             int showPosition = 0;
-            loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0], mFragments[1], mFragments[2],mFragments[3]);
+            loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0], mFragments[1], mFragments[2]);
 //            loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0]);
         } else {
-            mFragments[0] = findFragment(MarshallStabilityFragment.class);
-            mFragments[1] = findFragment(SofteningPointFragment.class);
-            mFragments[2] = findFragment(AsphaltPenetrationFragment.class);
-            mFragments[3] = findFragment(DuctilityFragment.class);
+            mFragments[0] = findFragment(SofteningPointFragment.class);
+            mFragments[1] = findFragment(AsphaltPenetrationFragment.class);
+            mFragments[2] = findFragment(DuctilityFragment.class);
         }
 
         initView();
@@ -77,14 +75,12 @@ public class LaboratoryActivity extends BaseActivity {
     }
 
     public void initData() {
-        AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.marshall_stability, R.drawable.ic_search_white_18dp, R.color.white);
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.softening_point, R.drawable.ic_overproof, R.color.white);
-        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.asphalt_penetration, R.drawable.ic_statistic, R.color.white);
-        AHBottomNavigationItem item4 = new AHBottomNavigationItem(R.string.ductility, R.drawable.ic_statistic, R.color.white);
+        AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.softening_point, R.drawable.ic_overproof, R.color.white);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.asphalt_penetration, R.drawable.ic_statistic, R.color.white);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.ductility, R.drawable.ic_statistic, R.color.white);
         bottomNavigationItems.add(item1);
         bottomNavigationItems.add(item2);
         bottomNavigationItems.add(item3);
-        bottomNavigationItems.add(item4);
         bottomNavigation.addItems(bottomNavigationItems);
         bottomNavigation.setDefaultBackgroundColor(getResources().getColor(R.color.white));
         bottomNavigation.setBehaviorTranslationEnabled(false);

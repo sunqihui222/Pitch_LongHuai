@@ -17,7 +17,6 @@ import com.shtoone.liqing.common.Constants;
 import com.shtoone.liqing.event.EventData;
 import com.shtoone.liqing.mvp.contract.others.MainContract;
 import com.shtoone.liqing.mvp.presenter.others.MainPresenter;
-import com.shtoone.liqing.mvp.view.WaterStability.WaterStabilityFragment;
 import com.shtoone.liqing.mvp.view.base.BaseFragment;
 import com.shtoone.liqing.mvp.view.laboratory.LaboratoryFragment;
 import com.shtoone.liqing.mvp.view.paveSite.PaveSiteFragment;
@@ -81,18 +80,16 @@ public class MainFragment extends BaseFragment<MainContract.Presenter> implement
         ButterKnife.bind(this, view);
         if (savedInstanceState == null) {
             mFragments[0] = PitchFragment.newInstance();
-            mFragments[1] = WaterStabilityFragment.newInstance();
-            mFragments[2]= LaboratoryFragment.newInstance();
-            mFragments[3]= PaveSiteFragment.newInstance();;
-            loadMultipleRootFragment(R.id.fl_container_main_fragment, 0, mFragments[0], mFragments[1],mFragments[2],mFragments[3]);
+            mFragments[1]= LaboratoryFragment.newInstance();
+            mFragments[2]= PaveSiteFragment.newInstance();;
+            loadMultipleRootFragment(R.id.fl_container_main_fragment, 0, mFragments[0], mFragments[1],mFragments[2]);
         } else {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             // 这里我们需要拿到mFragments的引用,也可以通过getSupportFragmentManager.getFragments()自行进行判断查找(效率更高些),用下面的方法查找更方便些
             KLog.e("数据恢复");
             mFragments[0] = findFragment(PitchFragment.class);
-            mFragments[1] = findFragment(WaterStabilityFragment.class);
-            mFragments[2] = findFragment(LaboratoryFragment.class);
-            mFragments[3] = findFragment(PaveSiteFragment.class);
+            mFragments[1] = findFragment(LaboratoryFragment.class);
+            mFragments[2] = findFragment(PaveSiteFragment.class);
         }
         initData();
         return view;
@@ -115,13 +112,11 @@ public class MainFragment extends BaseFragment<MainContract.Presenter> implement
 //        }
 
         AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.liqing, R.drawable.factory, R.color.white);
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.waterstability, R.drawable.resizeapi, R.color.white);
-        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.laboratory, R.drawable.labortory, R.color.white);
-        AHBottomNavigationItem item4 = new AHBottomNavigationItem(R.string.pavesite, R.drawable.road, R.color.white);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.laboratory, R.drawable.labortory, R.color.white);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.pavesite, R.drawable.road, R.color.white);
         bottomNavigationItems.add(item1);
         bottomNavigationItems.add(item2);
         bottomNavigationItems.add(item3);
-        bottomNavigationItems.add(item4);
         bottomNavigationMainFragment.addItems(bottomNavigationItems);
         bottomNavigationMainFragment.setDefaultBackgroundColor(getResources().getColor(R.color.white));
         bottomNavigationMainFragment.setBehaviorTranslationEnabled(true);
