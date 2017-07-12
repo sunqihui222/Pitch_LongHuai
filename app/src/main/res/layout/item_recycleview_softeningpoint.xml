@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_item_recyclerview_softeningpoint_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="@dimen/card_Corner_Radius"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/softeningpoint_item_do"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/softeningpoint_testtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="试验时间"
+            />
+
+        <TextView
+            android:id="@+id/softeningpoint_header5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="样品编号"
+            />
+
+        <TextView
+            android:id="@+id/softeningpoint_SHeader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="部位"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/softeningpoint_avgvalue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="平均值"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/softeningpoint_biaoZhun1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="标准值"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/softeningpoint_ruanhuadian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="单值1"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/softeningpoint_ruanhuadian2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="单值2"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <com.shtoone.liqing.widget.SlantedTextView
+        android:id="@+id/stv_isqualified"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|right"
+        android:gravity="center"
+        app:slantedBackgroundColor="@color/material_green_300"
+        app:slantedLength="30dp"
+        app:slantedMode="right"
+        app:slantedText=""
+        app:slantedTextColor="@color/material_white"
+        app:slantedTextSize="13sp" />
+
+
+</android.support.v7.widget.CardView>

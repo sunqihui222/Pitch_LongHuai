@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/cv_item_recyclerview_mashall_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    app:cardCornerRadius="@dimen/card_Corner_Radius"
+                                    app:cardElevation="3dp"
+                                    app:cardPreventCornerOverlap="false"
+                                    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 第一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="试验时间:"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:text="2015-07-24 08:17:13"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/maxieer_part"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_part"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:text="上面层"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <!-- 第三行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="@string/maxieer_ioavg"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_ioavg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_between"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <!-- 第四行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="@string/maxieer_safeavg"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_safeavg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/tv_maxieer_standard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.shtoone.liqing.widget.SlantedTextView
+        android:id="@+id/stv_quality"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|right"
+        android:gravity="center"
+        app:slantedBackgroundColor="@color/material_green_300"
+        app:slantedLength="30dp"
+        app:slantedMode="right"
+        app:slantedText=""
+        app:slantedTextColor="@color/material_white"
+        app:slantedTextSize="13sp" />
+
+</android.support.v7.widget.CardView>

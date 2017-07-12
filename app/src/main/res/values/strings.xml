@@ -1,0 +1,284 @@
+<resources>
+    <string name="app_name">益马高速</string>
+
+    <string name="login">登录</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <!--登陆模块-->
+    <string name="system_name">益马高速路面施工动态监控系统
+</string>
+    <string name="system_name0">数据监控信息化管理系统</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="input_password">请输入密码</string>
+    <string name="login_company">版权：上海同望信息技术有限公司</string>
+    <string name="login_copyright">Copyright 2015-2017</string>
+    <string name="login_error">用户名或密码错误</string>
+    <string name="login_success">登录成功</string>
+    <string name="logining">拼命登录中…</string>
+
+
+    <!-- 新添加的字符串 -->
+    <string name="laboratory">实验室</string>
+    <string name="liqing">沥青</string>
+    <string name="waterstability">水稳</string>
+    <!--<string name="pave_site">摊铺现场</string>-->
+    <string name="pavesite">摊铺现场</string>
+    <string name="monitor">实时监控</string>
+
+    <string name="press_again_exit">再按一次退出</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="transition_dialog">transition_dialog</string>
+    <string name="action_settings">Settings</string>
+    <string name="add">添加</string>
+    <string name="register">注册</string>
+    <string name="machine_code">机器码</string>
+    <string name="register_code">注册码</string>
+    <string name="registering">拼命注册中…</string>
+    <string name="register_fail">注册失败</string>
+    <string name="register_success">注册成功</string>
+
+    <!--版本更新模块-->
+    <string name="company">上海同望信息技术有限公司</string>
+    <string name="check_update">检测更新</string>
+    <string name="update">更新</string>
+    <string name="project_name">项目名称：</string>
+    <string name="app_name_hint">APP名称：</string>
+    <string name="now_version">当前版本：</string>
+    <string name="version_order">版权所有：</string>
+
+    <string name="total_product">总产量统计</string>
+    <string name="matrial_Stastics">总产量统计</string>
+
+    <string name="select">查询</string>
+
+    <!--  -->
+
+    <string name="OutletTemperature">出料口温度</string>
+    <string name="PendingTreatment">待处置报警</string>
+    <string name="OverProof">超标统计</string>
+    <string name="PitchProductMonitor">生产监控</string>
+    <string name="ProductQuery">生产查询</string>
+    <string name="DayProductQuery">日生产查询</string>
+    <string name="HistoryData">历史数据</string>
+
+
+    <string name="HistoryDataDetail">历史数据详情</string>
+    <string name="PendingTreatmentDetail">待处置报警详情</string>
+
+
+    <string name="sc_chuliaokouwendu_shijian">采集时间</string>
+    <string name="sc_chuliaokouwendu_wendu">温度(℃)</string>
+
+    <!-- ■■ 超标统计 ■■ -->
+    <string name="chaobiao_chanliang">总产量:</string>
+    <string name="chaobiao_danwei">kg</string>
+    <string name="chaobiao_button_chaxun">查询</string>
+    <string name="chaobiao_panshu">盘数:</string>
+    <string name="chaobiao_chaobiaojibie">超标级别</string>
+    <string name="chaobiao_dengji">等级</string>
+    <string name="chaobiao_chaobiaopanshu">超标盘数</string>
+    <string name="chaobiao_chaobiaolv">超标率</string>
+    <string name="chaobiao_chuzhilv">处置率</string>
+
+    <!-- ■■ 生产监控 ■■ -->
+    <string name="shengchan_title">油石比实时监控</string>
+    <string name="shengchan_base">0</string>
+    <string name="shengchan_guliaowendu">骨料温度(°C)</string>
+    <string name="shengchan_liqingwendu">沥青温度(°C)</string>
+    <string name="shengchan_chuliaowendu">出料温度(°C)</string>
+    <string name="shengchan_peibijiankong">配比实时监控(单位:kg)</string>
+    <string name="loading">加载中...</string>
+
+
+    <!--选择查询对话框模块-->
+    <string name="select_start_time">开始时间</string>
+    <string name="select_end_time">结束时间</string>
+    <string name="select_alarm_level">报警级别</string>
+    <string name="all">全部</string>
+    <string name="pending_treat">待处置</string>
+    <string name="treated">已处置</string>
+    <string name="primary_level">低级</string>
+    <string name="middle_level">中级</string>
+    <string name="senior_level">高级</string>
+
+    <string name="produce_data_detail">生产数据详情</string>
+    <string name="day_product_query_detail">日产量查询详情</string>
+
+    <!--主页ConcreteActivity模块-->
+    <string name="produce_query">生产查询</string>
+    <string name="overproof">超标处置</string>
+    <string name="material_statistic">材料核算</string>
+    <string name="deviation">误差(kg)</string>
+    <string name="deviation_rate">误差率(%)</string>
+    <string name="matching">配比(kg)</string>
+    <string name="reality">实际(kg)</string>
+    <string name="material_name">材料名称</string>
+    <string name="total_Statistics">综合统计</string>
+
+    <!-- ■■ 日生产量统计  ■■ -->
+    <string name="richanliang_shigongzhuanghao">施工桩号：</string>
+    <string name="richanliang_caijichanliang">采集产量(kg)：</string>
+    <string name="richanliang_panshu">盘数：</string>
+    <string name="richanliang_xiuzhengchanliang">修正产量(kg)：</string>
+    <string name="richanliang_midu">密度(kg/m³)：</string>
+    <string name="richanliang_chang">长(m)：</string>
+    <string name="richanliang_kuan">宽(m)：</string>
+    <string name="richanliang_hou">厚(cm)：</string>
+    <string name="richanliang_caijichanliang_un">采集产量：</string>
+    <string name="richanliang_xiuzhengchanliang_un">修正产量：</string>
+    <string name="richanliang_midu_un">密度：</string>
+    <string name="richanliang_chang_un">长：</string>
+    <string name="richanliang_kuan_un">宽：</string>
+    <string name="richanliang_hou_un">厚：</string>
+    <string name="richanliang_hou_desc">(不能输入，自动计算)</string>
+    <string name="richanliang_xinghao">型号</string>
+    <string name="richanliang_beizhu">备注</string>
+    <string name="pendingtreat_detail">超标处置详情</string>
+
+    <!--详情页模块-->
+    <string name="handle_person">处置人</string>
+    <string name="handle_time">处置时间</string>
+    <string name="handle_reason">处置原因</string>
+    <string name="handle_way">处置方式</string>
+    <string name="handle_result">处置结果</string>
+    <string name="submit">提交</string>
+    <string name="reset">重置</string>
+    <string name="confirm">确定</string>
+    <string name="abandon">放弃</string>
+    <string name="approve_person">审批人</string>
+    <string name="examine_result">监理结果</string>
+    <string name="examine_approve">监理审批</string>
+    <string name="examine_opinion">监理意见</string>
+
+    <string name="confirm_time">确认时间</string>
+    <string name="approve_time">审批时间</string>
+
+    <!-- 新添加的字符串 -->
+    <string name="marshall">马歇尔</string>
+    <string name="ruanhuadian">软化点</string>
+    <string name="zhenrudu">针入度</string>
+    <string name="yandu">延度</string>
+    <string name="select_equipment">选择设备</string>
+    <string name="select_test_type">选择类型</string>
+
+
+    <string name="alarm_level">报警等级</string>
+    <string name="zongpanshu">总盘数:</string>
+    <string name="zongfangliang">总方量:</string>
+    <string name="overproof_count">超标盘数</string>
+    <string name="overproof_rate">超标率</string>
+    <string name="handle_count">处置盘数</string>
+    <string name="handle_rate">处置率</string>
+    <string name="elementary_ranking">初级</string>
+    <string name="middle_ranking">中级</string>
+    <string name="high_ranking">高级</string>
+
+    <string name="toolbar_name">湖南益马高速</string>
+
+    <!-- 沥青类型-->
+    <string name="general">普通</string>
+    <string name="modified">改性</string>
+
+    <!-- 层面-->
+    <string name="above">上面</string>
+    <string name="center">中面</string>
+    <string name="below">下面</string>
+
+    <!--扫描界面上传报告-->
+    <string name="pitch_reoprt">沥青报告</string>
+
+    <string name="relogin">重新登录</string>
+
+    <string name="scan">扫一扫</string>
+
+    <string name="sign_out">退出</string>
+    <string name="consult_person">咨询人</string>
+    <string name="consult_opinion">咨询意见</string>
+
+
+    //实验室
+    <string name="marshall_stability">马歇尔稳定度</string>
+    <string name="softening_point">软化点</string>
+    <string name="asphalt_penetration">针入度</string>
+    <string name="ductility">延度</string>
+
+
+    <!-- 马歇尔界面 -->
+    <string name="maxieer_number">样品编号：</string>
+    <string name="maxieer_part">部位：</string>
+    <string name="maxieer_ioavg">流均值：</string>
+    <string name="maxieer_safeavg">稳定度均值：</string>
+    <string name="marshall_list">马歇尔稳定度</string>
+
+
+    <!-- 马歇尔详情  -->
+    <string name="maxieer_detail_projectname">工程名称：</string>
+    <string name="maxieer_detail_part">工程部位：</string>
+    <string name="maxieer_detail_number">样品编号：</string>
+    <string name="maxieer_detail_name">样品名称：</string>
+    <string name="maxieer_detail_desc">样品描述：</string>
+    <string name="maxieer_detail_liuzhi">流值（mm）</string>
+    <string name="maxieer_detail_wendingdu">稳定值(KN)</string>
+    <string name="maxieer_detail_danzhi">单值</string>
+    <string name="maxieer_detail_pingjun">平均：</string>
+    <string name="maxieer_detail_between">标准值范围</string>
+    <string name="maxieer_detail_title">荷载（KN）——流值(mm)关系图</string>
+    <string name="maxieer_detail_15">15</string>
+    <string name="maxieer_detail_12">12</string>
+    <string name="maxieer_detail_9">9</string>
+    <string name="maxieer_detail_6">6</string>
+    <string name="maxieer_detail_3">3</string>
+    <string name="maxieer_detail_0">0</string>
+
+    <string name="marshall_detail">马歇尔稳定度详情</string>
+
+
+    <string name="pave_temp">摊铺温度</string>
+    <string name="endpress_temp">终压温度</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+    <string name="test_time">实验时间</string>
+    <string name="bianhao">样品编号</string>
+    <string name="part">部位</string>
+    <string name="averge1">平均值</string>
+    <string name="biaozhun1">标准值</string>
+    <string name="danzhi1">单值1</string>
+    <string name="danzhi2">单值2</string>
+    <string name="Lab">试验室</string>
+    <string name="softeningpoint">软化度</string>
+
+    <!-- ■■ 软化点详情 ■■ -->
+    <string name="softpoint_detail_projectname">工程名称：</string>
+    <string name="softpoint_detail_number">样品编号：</string>
+    <string name="softpoint_detail_name">样品名称：</string>
+    <string name="softpoint_detail_part">工程部位：</string>
+    <string name="softpoint_detail_desc">样品描述：</string>
+    <string name="softpoint_detail_point">软化点（mm）</string>
+    <string name="softpoint_detail_single">单值：</string>
+    <string name="softpoint_detail_standard">标准值：</string>
+    <string name="softpoint_detail_average">平均值：</string>
+
+    <!-- ■■ 针入度列表 ■■ -->
+    <string name="zhenrudu_number">样品编号:</string>
+    <string name="zhenrudu_part">部位:</string>
+    <string name="zhenrudu_average">平均值:</string>
+    <string name="zhenrudu_standard">标准值:</string>
+    <string name="zhenrudu_single">单值1~3:</string>
+
+    <!-- ■■ 针入度 ■■ -->
+    <string name="zhenrudu_detail_projectname">工程名称:</string>
+    <string name="zhenrudu_detail_number">样品编号:</string>
+    <string name="zhenrudu_detail_name">样品名称:</string>
+    <string name="zhenrudu_detail_part">工程部位:</string>
+    <string name="zhenrudu_detail_desc">样品描述:</string>
+    <string name="zhenrudu_zhenrudu">针入度(mm):</string>
+    <string name="zhenrudu_detail_single">单值:</string>
+    <string name="zhenrudu_detail_standard">标准值:</string>
+    <string name="zhenrudu_detail_average">平均值:</string>
+
+    <string name="zhenrudu_detail">针入度详情</string>
+    <string name="yandu_detail">延度详情</string>
+
+</resources>
