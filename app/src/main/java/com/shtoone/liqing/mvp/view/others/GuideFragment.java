@@ -36,7 +36,7 @@ public class GuideFragment extends BaseFragment {
     Button bt;
     @BindView(R.id.fl_container_guide_fragment)
     FrameLayout fl;
-    private int[] arrayResouces = {R.drawable.bg_welcome_0, R.drawable.bg_welcome_1, R.drawable.bg_welcome_2};
+    private int[] arrayResouces = {R.drawable.welcome0, R.drawable.bg_welcome_1, R.drawable.bg_welcome_2};
     private ArgbEvaluator mArgbEvaluator = new ArgbEvaluator();
 
     public static GuideFragment newInstance() {
