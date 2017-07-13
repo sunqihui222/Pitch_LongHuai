@@ -46,7 +46,7 @@ public class AsphaltPenetrationPresenter extends BasePresenter<AsphaltPenetratio
                             getView().showEmpty();
                         }
                     }else {
-                        getView().showError(new IOException());
+                        getView().showEmpty();
                     }
                     KLog.e(TAG,"针入度数据="+response.body());
                 }else {

@@ -119,6 +119,7 @@ public class LaboratoryFragment extends BaseFragment<LaboratoryContract.Presente
                 KLog.e(TAG, mParametersData.toString());
                 mParametersData.departType = mDepartmentBean.departtype;
                 mParametersData.biaoshiid = mDepartmentBean.departmentID;
+                mParametersData.deviceType = Constants.TYPE_RUANHUADIAN;
 //随便定义测试用的，不一定正确
                 ((MainActivity) _mActivity).startDrawerActivity(mParametersData, null);
             }

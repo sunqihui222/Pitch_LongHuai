@@ -45,7 +45,7 @@ public class SoftentingPointPresenter extends BasePresenter<SofteningPointContra
                             getView().showEmpty();
                         }
                     }else{
-                        getView().showError(new IOException());
+                        getView().showEmpty();
                     }
                 }else {
                     getView().showError(new IOException());

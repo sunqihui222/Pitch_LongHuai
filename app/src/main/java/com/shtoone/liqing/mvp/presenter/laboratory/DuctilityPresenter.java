@@ -45,7 +45,7 @@ public class DuctilityPresenter extends BasePresenter<DuctilityContract.View> im
                             getView().showEmpty();
                         }
                     }else{
-                        getView().showError(new IOException());
+                        getView().showEmpty();
                     }
                 }else {
                     getView().showError(new IOException());

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">益马高速</string>
+    <string name="app_name">连英高速</string>
 
     <string name="login">登录</string>
     <string name="username">用户名</string>
@@ -174,7 +174,7 @@
     <string name="middle_ranking">中级</string>
     <string name="high_ranking">高级</string>
 
-    <string name="toolbar_name">湖南益马高速</string>
+    <string name="toolbar_name">广东龙怀高速连英段</string>
 
     <!-- 沥青类型-->
     <string name="general">普通</string>
