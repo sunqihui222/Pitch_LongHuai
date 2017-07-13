@@ -83,7 +83,7 @@
             android:name=".mvp.view.others.DetailActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".mvp.view.pitch.PitchActivity" />
-        <activity android:name=".mvp.view.endpress.EndpressTempActivity"/>
+        <activity android:name=".mvp.view.pave.PaveSpeedActivity"/>
         <activity android:name=".mvp.view.pave.PaveTemptureActivity"/>
 
         <activity android:name=".mvp.view.others.ScanQRCodeActivity" />

@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.shtoone.liqing.R;
 import com.shtoone.liqing.mvp.contract.paveSite.PaveSiteContract;
 import com.shtoone.liqing.mvp.view.base.BaseFragment;
-import com.shtoone.liqing.mvp.view.endpress.EndpressTempActivity;
+import com.shtoone.liqing.mvp.view.pave.PaveSpeedActivity;
 import com.shtoone.liqing.mvp.view.pave.PaveTemptureActivity;
 
 import java.util.List;
@@ -54,7 +54,7 @@ public class PaveSiteFragment extends BaseFragment<PaveSiteContract.Presenter> i
 
     @OnClick(R.id.cv_pave_speed)
     void cv2OnClick(){
-        startActivity(new Intent(_mActivity, EndpressTempActivity.class));
+        startActivity(new Intent(_mActivity, PaveSpeedActivity.class));
     }
 
     @OnClick(R.id.cv_pave_site)

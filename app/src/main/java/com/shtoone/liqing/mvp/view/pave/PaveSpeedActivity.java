@@ -1,4 +1,4 @@
-package com.shtoone.liqing.mvp.view.endpress;
+package com.shtoone.liqing.mvp.view.pave;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -38,15 +38,14 @@ import com.shtoone.liqing.BaseApplication;
 import com.shtoone.liqing.R;
 import com.shtoone.liqing.common.Constants;
 import com.shtoone.liqing.event.EventData;
-import com.shtoone.liqing.mvp.contract.pave.PaveTemptureContract;
-import com.shtoone.liqing.mvp.model.PaveTemptureData;
+import com.shtoone.liqing.mvp.contract.paveSite.PaveSpeedContract;
+import com.shtoone.liqing.mvp.model.PaveSpeedData;
 import com.shtoone.liqing.mvp.model.bean.DepartmentBean;
 import com.shtoone.liqing.mvp.model.bean.ParametersData;
-import com.shtoone.liqing.mvp.presenter.pave.PaveTempturePresenter;
-import com.shtoone.liqing.mvp.view.adapter.PaveTempFragmentRecyclerViewAdapter;
+import com.shtoone.liqing.mvp.presenter.pave.PaveSpeedPresenter;
+import com.shtoone.liqing.mvp.view.adapter.PaveSpeedFragmentRecyclerViewAdapter;
 import com.shtoone.liqing.mvp.view.base.BaseActivity;
 import com.shtoone.liqing.mvp.view.others.DrawerActivity;
-import com.shtoone.liqing.mvp.view.pave.PaveTemptureActivity;
 import com.shtoone.liqing.utils.DateUtils;
 import com.shtoone.liqing.utils.DensityUtils;
 import com.shtoone.liqing.utils.ToastUtils;
@@ -78,7 +77,7 @@ import static com.shtoone.liqing.BaseApplication.parametersData;
  * Created by Administrator on 2017/6/5.
  */
 
-public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Presenter> implements PaveTemptureContract.View ,View.OnTouchListener,GestureDetector.OnDoubleTapListener, GestureDetector.OnGestureListener{
+public class PaveSpeedActivity extends BaseActivity<PaveSpeedContract.Presenter> implements PaveSpeedContract.View ,View.OnTouchListener,GestureDetector.OnDoubleTapListener, GestureDetector.OnGestureListener{
 
     private static final String TAG = PaveTemptureActivity.class.getSimpleName();
     private boolean isRegistered = false;
@@ -94,10 +93,10 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
     private ParametersData mParametersData;
 
     private LinearLayoutManager mLinearLayoutManager;
-    private PaveTempFragmentRecyclerViewAdapter mAdapter;
+    private PaveSpeedFragmentRecyclerViewAdapter mAdapter;
     private boolean isLoading;
     private int lastVisibleItemPosition;
-    private List<PaveTemptureData.DataBean> listData;
+    private List<PaveSpeedData.DataBean> listData;
     private static final int FLING_MIN_DISTANCE = 20;
     private static final int FLING_MIN_VELOCITY = 200;
     private ViewFlipper mFlipper;
@@ -106,19 +105,19 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
 
     @NonNull
     @Override
-    protected PaveTemptureContract.Presenter createPresenter() {
-        return new PaveTempturePresenter(this);
+    protected PaveSpeedContract.Presenter createPresenter() {
+        return new PaveSpeedPresenter(this);
     }
 
-    public static EndpressTempActivity newInstance() {
+    public static PaveSpeedActivity newInstance() {
         KLog.e(TAG,"--------------newInstance-------------");
-        return new EndpressTempActivity();
+        return new PaveSpeedActivity();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_pave_temp);
+        setContentView(R.layout.fragment_pave_speed);
         initView();
         initData();
         EventBus.getDefault().register(this);
@@ -152,6 +151,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
         setToolbarTitle();
         initToolbarBackNavigation(mToolbar);
         initPageStateLayout(mPageStateLayout);
+        initPtrFrameLayout(mPtrFrameLayout);
         mPageStateLayout.setPadding(0, 0, 0, DensityUtils.dp2px(this, 0));
         KLog.e(TAG,"-------initData--------");
 
@@ -180,7 +180,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
         map.put("pageNo",mParametersData.currentPage+"");
         map.put("maxPageItems","15");
         KLog.e(TAG,"map=:"+map.toString());
-        mPresenter.requestPaveTemptureData(map);
+        mPresenter.requestPaveSpeedData(map);
     }
 
     @Override
@@ -200,7 +200,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
     }
 
     @Override
-    public void responsePaveTempData(PaveTemptureData data) {
+    public void responsePaveSpeedData(PaveSpeedData data) {
 
         listData=data.getData();
         setViewData();
@@ -212,7 +212,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
     }
 
     @Override
-    public void responseLoadMore(PaveTemptureData data) {
+    public void responseLoadMore(PaveSpeedData data) {
         listData=data.getData();
         setViewData();
         mAdapter.setNewData(listData);
@@ -231,7 +231,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setNestedScrollingEnabled(false);
         //设置动画与适配器
-        mAdapter = new PaveTempFragmentRecyclerViewAdapter();
+        mAdapter = new PaveSpeedFragmentRecyclerViewAdapter();
         SlideInLeftAnimationAdapter mSlideInLeftAnimationAdapter = new SlideInLeftAnimationAdapter(mAdapter);
         mSlideInLeftAnimationAdapter.setFirstOnly(true);
         mSlideInLeftAnimationAdapter.setDuration(500);
@@ -296,7 +296,7 @@ public class EndpressTempActivity extends BaseActivity<PaveTemptureContract.Pres
 
         for (int i = 0; i < listData.size(); i++) {
 
-            yVals0.add(new Entry(Float.parseFloat(listData.get(i).getTmpdata()), i));
+            yVals0.add(new Entry(Float.parseFloat(listData.get(i).getTmpsudu()), i));
         }
 
         LineDataSet mLineDataSet0 = new LineDataSet(yVals0, "曲线图");

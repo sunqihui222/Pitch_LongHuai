@@ -235,7 +235,7 @@
 
 
     <string name="pave_temp">摊铺温度</string>
-    <string name="endpress_temp">终压温度</string>
+    <string name="endpress_temp">摊铺速度</string>
 
     <string name="no_result">对不起，没有搜索到相关数据！</string>
 

@@ -96,8 +96,6 @@ public class ParametersFragment extends BaseFragment<ParametersContract.Presente
     MaterialSpinner msSelectLuserpositionDialog;
     @BindView(R.id.rb_all_level_dialog)
     RadioButton rbAllLevelDialog;
-    @BindView(R.id.rb_low_level_dialog)
-    RadioButton rbLowLevelDialog;
     @BindView(R.id.rb_middle_level_dialog)
     RadioButton rbMiddleLevelDialog;
     @BindView(R.id.rb_high_level_dialog)
@@ -275,9 +273,9 @@ public class ParametersFragment extends BaseFragment<ParametersContract.Presente
                     case R.id.rb_middle_level_dialog:
                         mparameterData.alarmLevel = "2";
                         break;
-                    case R.id.rb_low_level_dialog:
-                        mparameterData.alarmLevel = "1";
-                        break;
+//                    case R.id.rb_low_level_dialog:
+//                        mparameterData.alarmLevel = "1";
+//                        break;
                     case R.id.rb_all_level_dialog:
                         mparameterData.alarmLevel = "0";
                         break;
@@ -378,9 +376,9 @@ public class ParametersFragment extends BaseFragment<ParametersContract.Presente
         if (mparameterData.alarmLevel.equals("0")) {
             rgLevelDialog.check(R.id.rb_all_level_dialog);
         }
-        else if (mparameterData.alarmLevel.equals("1")) {
-            rgLevelDialog.check(R.id.rb_low_level_dialog);
-        }
+//        else if (mparameterData.alarmLevel.equals("1")) {
+//            rgLevelDialog.check(R.id.rb_low_level_dialog);
+//        }
         else if (mparameterData.alarmLevel.equals("2")) {
             rgLevelDialog.check(R.id.rb_middle_level_dialog);
         } else if (mparameterData.alarmLevel.equals("3")) {

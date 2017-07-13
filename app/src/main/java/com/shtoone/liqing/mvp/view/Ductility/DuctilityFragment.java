@@ -57,24 +57,24 @@ import retrofit2.adapter.rxjava.HttpException;
  * Created by Administrator on 2017/5/31.
  */
 
-public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter> implements DuctilityContract.View{
+public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter> implements DuctilityContract.View {
 
     @BindView(R.id.toolbar_toolbar)
-    Toolbar              toolbarToolbar;
+    Toolbar toolbarToolbar;
     @BindView(R.id.recyclerview)
-    RecyclerView         recyclerview;
+    RecyclerView recyclerview;
     @BindView(R.id.pagestatelayout)
-    PageStateLayout      pagestatelayout;
+    PageStateLayout pagestatelayout;
     @BindView(R.id.ptrframelayout)
-    PtrFrameLayout       ptrframelayout;
+    PtrFrameLayout ptrframelayout;
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    private ParametersData parametersData =new ParametersData();
+    private ParametersData parametersData = new ParametersData();
     private DepartmentBean departmentBean;
     private DuctilityBean mAsphaltPenetrationBean;
-    private LinearLayoutManager           linearLayoutManager;
-    private ScaleInAnimationAdapter       mScaleInAnimationAdapter;
+    private LinearLayoutManager linearLayoutManager;
+    private ScaleInAnimationAdapter mScaleInAnimationAdapter;
     private View footloading;
     private View footerror;
     private View footnoloading;
@@ -84,7 +84,7 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     private List<DuctilityBean.DataEntity> list;
     private String TAG = DuctilityFragment.class.getSimpleName();
 
-    public static DuctilityFragment newInstance(DepartmentBean departmentBean){
+    public static DuctilityFragment newInstance(DepartmentBean departmentBean) {
         DuctilityFragment fragment = new DuctilityFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("depatmentdate", departmentBean);
@@ -99,9 +99,9 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_ductility, container, false);
-        footloading=inflater.inflate(R.layout.item_footer_loading,container,false);
-        footerror=inflater.inflate(R.layout.item_footer_error,container,false);
-        footnoloading=inflater.inflate(R.layout.item_footer_not_loading,container,false);
+        footloading = inflater.inflate(R.layout.item_footer_loading, container, false);
+        footerror = inflater.inflate(R.layout.item_footer_error, container, false);
+        footnoloading = inflater.inflate(R.layout.item_footer_not_loading, container, false);
         Bundle bundle = getArguments();
         departmentBean = (DepartmentBean) bundle.getSerializable("depatmentdate");
         ButterKnife.bind(this, view);
@@ -114,10 +114,10 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
 
     private void initDate() {
 
-        parametersData.departType=departmentBean.departtype;
-        parametersData.biaoshiid=departmentBean.departmentID;
-        parametersData.fromTo= Constants.AsphaltPenetrationFragment;
-        departmentBean.fromto= Constants.AsphaltPenetrationFragment;
+        parametersData.departType = departmentBean.departtype;
+        parametersData.biaoshiid = departmentBean.departmentID;
+        parametersData.fromTo = Constants.AsphaltPenetrationFragment;
+        departmentBean.fromto = Constants.AsphaltPenetrationFragment;
         parametersData.deviceType = Constants.TYPE_YANDU;
 
         pagestatelayout.setPadding(0, 0, 0, DensityUtils.dp2px(_mActivity, 56));
@@ -125,7 +125,7 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
 
         initToolbarBackNavigation(toolbarToolbar);
         madapter = new DuctilityFragmentAdapter();
-        linearLayoutManager=new LinearLayoutManager(_mActivity);
+        linearLayoutManager = new LinearLayoutManager(_mActivity);
         SlideInLeftAnimationAdapter mSlideInLeftAnimationAdapter = new SlideInLeftAnimationAdapter(madapter);
         mSlideInLeftAnimationAdapter.setDuration(500);
         mSlideInLeftAnimationAdapter.setInterpolator(new OvershootInterpolator(0.5f));
@@ -170,9 +170,9 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
         madapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Intent intent = new Intent(getActivity(),DuctilityDetailActivity.class);
+                Intent intent = new Intent(getActivity(), DuctilityDetailActivity.class);
                 String f_guid = madapter.getData().get(position).getF_GUID();
-                intent.putExtra("f_guid",f_guid);
+                intent.putExtra("f_guid", f_guid);
                 startActivity(intent);
 
             }
@@ -182,15 +182,15 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     @Override
     public void loadData() {
         super.loadData();
-        Map<String,String> map=new HashMap<>();
-        map.put("departType",departmentBean.departtype);
-        map.put("startTime",DateUtils.ChangeTimeToLong(parametersData.startDateTime));
-        map.put("endTime",DateUtils.ChangeTimeToLong(parametersData.endDateTime));
-        map.put("biaoshiid",departmentBean.departmentID);
-        map.put("F_SBBH",parametersData.equipmentID);
-        map.put("isQualified",parametersData.level);
-        map.put("pageNo",parametersData.currentPage+"");
-        map.put("maxPageItems",15+"");
+        Map<String, String> map = new HashMap<>();
+        map.put("departType", departmentBean.departtype);
+        map.put("startTime", DateUtils.ChangeTimeToLong(parametersData.startDateTime));
+        map.put("endTime", DateUtils.ChangeTimeToLong(parametersData.endDateTime));
+        map.put("biaoshiid", departmentBean.departmentID);
+        map.put("F_SBBH", parametersData.equipmentID);
+        map.put("isQualified", parametersData.level);
+        map.put("pageNo", parametersData.currentPage + "");
+        map.put("maxPageItems", 15 + "");
         mPresenter.requestDuctilityBean(map);
 
     }
@@ -199,15 +199,15 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     @Override
     public void loadMore() {
         super.loadMore();
-        Map<String,String> map=new HashMap<>();
-        map.put("departType",departmentBean.departtype);
-        map.put("startTime",DateUtils.ChangeTimeToLong(parametersData.startDateTime));
-        map.put("endTime",DateUtils.ChangeTimeToLong(parametersData.endDateTime));
-        map.put("biaoshiid",departmentBean.departmentID);
-        map.put("F_SBBH",parametersData.equipmentID);
-        map.put("isQualified",parametersData.level);
-        map.put("pageNo",parametersData.currentPage+1+"");
-        map.put("maxPageItems",15+"");
+        Map<String, String> map = new HashMap<>();
+        map.put("departType", departmentBean.departtype);
+        map.put("startTime", DateUtils.ChangeTimeToLong(parametersData.startDateTime));
+        map.put("endTime", DateUtils.ChangeTimeToLong(parametersData.endDateTime));
+        map.put("biaoshiid", departmentBean.departmentID);
+        map.put("F_SBBH", parametersData.equipmentID);
+        map.put("isQualified", parametersData.level);
+        map.put("pageNo", parametersData.currentPage + 1 + "");
+        map.put("maxPageItems", 15 + "");
         mPresenter.loadMoreData(map);
 
     }
@@ -274,7 +274,7 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
 
     @Override
     public void showLoadMoreError(Throwable throwable) {
-        isLoading=false;
+        isLoading = false;
         if (throwable instanceof ConnectException) {
             ToastUtils.showToast(BaseApplication.mContext, "网络异常,请检测网络");
             madapter.removeAllFooterView();
@@ -303,14 +303,14 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
                 madapter.removeAllFooterView();
                 madapter.notifyDataSetChanged();
             }
-        },2000);
+        }, 2000);
     }
 
     @Override
     public void responseLoadMore(DuctilityBean ductilityBean) {
 
         isLoading = false;
-        if (ductilityBean.getData().size()>0){
+        if (ductilityBean.getData().size() > 0) {
             parametersData.currentPage++;
         }
         list.addAll(ductilityBean.getData());
@@ -322,8 +322,8 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     @Override
     public void responseDuctilityBean(DuctilityBean ductilityBean) {
 
-        isLoading=false;
-        parametersData.currentPage=1;
+        isLoading = false;
+        parametersData.currentPage = 1;
         list = ductilityBean.getData();
         madapter.removeAllHeaderView();
         madapter.removeAllFooterView();
@@ -363,14 +363,14 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
 
     @OnClick(R.id.fab)
     public void onClick() {
-        parametersData.fromTo= Constants.DuctilityFragment;
-        ((LaboratoryActivity) _mActivity).startDrawerActivity(parametersData,null);
+        parametersData.fromTo = Constants.DuctilityFragment;
+        ((LaboratoryActivity) _mActivity).startDrawerActivity(parametersData, null);
     }
 
     private void setToolbarTitle() {
         //        if (null != toolbarToolbar && null != BaseApplication.mDepartmentData && !TextUtils.isEmpty(BaseApplication.mDepartmentData.departmentName)) {
         String toolBarName = getResources().getString(R.string.Lab);
-        StringBuffer sb = new StringBuffer( toolBarName+ " > ");
+        StringBuffer sb = new StringBuffer(toolBarName + " > ");
         sb.append("延度");
         toolbarToolbar.setTitle(sb.toString());
         //        }
@@ -387,7 +387,7 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
                 this.parametersData.equipmentID = eventData.parametersBean.equipmentID;
                 this.parametersData.level = eventData.parametersBean.level;
                 ptrframelayout.autoRefresh(true);
-                Log.e("level",eventData.parametersBean.level);
+                Log.e("level", eventData.parametersBean.level);
             }
         }
         if (eventData.position == Constants.DuctilityFragment) {

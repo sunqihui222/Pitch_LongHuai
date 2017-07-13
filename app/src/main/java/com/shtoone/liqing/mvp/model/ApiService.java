@@ -202,6 +202,10 @@ public interface ApiService {
     @GET("appXc/tmpwenduchaxun?")
     Call<PaveTemptureData> requestPaveTempData(@QueryMap Map<String, String> map);
 
+    //摊铺速度数据
+    @GET("appXc/tmpsuduchaxun?")
+    Call<PaveSpeedData> requestPaveSpeedData(@QueryMap Map<String, String> map);
+
     //软化度
     @GET("app/ruanhuadianChaXun?")
     Call<SofteningPointBean> requestSofteningPoint(@QueryMap Map<String, String> map);
