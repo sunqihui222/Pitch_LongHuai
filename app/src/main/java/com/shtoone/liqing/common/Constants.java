@@ -28,14 +28,10 @@ public class Constants {
 
 
     //测试地址
-    public static final String BASE_URL = "http://192.168.11.100:8888/gdnhmss/";
+//    public static final String BASE_URL = "http://192.168.11.100:8888/gdnhmss/";
 
     //平台地址
-//    public static final String BASE_URL = "http://114.215.239.38:8082/yzgsmss/";//广东云湛高速
-//    public static final String BASE_URL = "http://114.215.239.38:8082/rbgsmss/";//广东仁博高速
-
-    //湖南益马高速测试地址
-//    public static final String BASE_URL = "http://192.168.11.112:8080/hnymmss/";
+    public static final String BASE_URL = "http://192.168.11.109:8888/lygsmss/";//广东龙怀地址
 
     //湖南益马高速平台地址
 //    public static final String BASE_URL = "http://112.124.12.254:8082/hnymmss/";
