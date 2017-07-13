@@ -113,7 +113,6 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     }
 
     private void initDate() {
-
         parametersData.departType = departmentBean.departtype;
         parametersData.biaoshiid = departmentBean.departmentID;
         parametersData.fromTo = Constants.AsphaltPenetrationFragment;
@@ -122,7 +121,7 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
 
         pagestatelayout.setPadding(0, 0, 0, DensityUtils.dp2px(_mActivity, 56));
         initPageStateLayout(pagestatelayout);
-
+        initPtrFrameLayout(ptrframelayout);
         initToolbarBackNavigation(toolbarToolbar);
         madapter = new DuctilityFragmentAdapter();
         linearLayoutManager = new LinearLayoutManager(_mActivity);
@@ -215,7 +214,6 @@ public class DuctilityFragment extends BaseFragment<DuctilityContract.Presenter>
     @Override
     public void onResume() {
         super.onResume();
-        initPtrFrameLayout(ptrframelayout);
     }
 
     @Override

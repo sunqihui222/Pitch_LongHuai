@@ -282,8 +282,8 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
 
     }
 
-    @Override
-    public boolean onBackPressedSupport() {
-        return true;//消费掉事件
-    }
+//    @Override
+//    public boolean onBackPressedSupport() {
+//        return true;//消费掉事件
+//    }
 }

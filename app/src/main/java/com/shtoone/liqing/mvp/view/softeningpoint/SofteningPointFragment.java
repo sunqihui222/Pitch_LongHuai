@@ -185,28 +185,12 @@ public class SofteningPointFragment extends BaseFragment<SofteningPointContract.
         map.put("pageNo", parametersData.currentPage + "");
         map.put("maxPageItems", "15");
         mPresenter.requestSofteningPointBean(map);
-
-//        String departtype = mDepartmentBean.departtype;
-//        String startTime = DateUtils.ChangeTimeToLong(parametersData.startDateTime);
-//        String endTime = DateUtils.ChangeTimeToLong(parametersData.endDateTime);
-//        String biaoshiid = mDepartmentBean.departmentID;
-        //       String equipmentID = parametersData.equipmentID;
-//        parametersData.currentPage=1;
-        //       mPresenter.requestSofteningPointBean(departtype,startTime,endTime,10+"",equipmentID,"合格",parametersData.currentPage+"",15+"");
     }
 
 
     @Override
     public void loadMore() {
         super.loadMore();
-
-//        String departtype = mDepartmentBean.departtype;
-//        String startTime = DateUtils.ChangeTimeToLong(parametersData.startDateTime);
-//        String endTime = DateUtils.ChangeTimeToLong(parametersData.endDateTime);
-//        String biaoshiid = mDepartmentBean.departmentID;
-//        String equipmentID = parametersData.equipmentID;
-        //       mPresenter.loadMoreData(departtype,startTime,endTime,10+"",equipmentID,"合格",parametersData.currentPage+1+"",15+"");
-
         Map<String, String> map = new HashMap<>();
         map.put("departType", mDepartmentBean.departtype);
         map.put("startTime", DateUtils.ChangeTimeToLong(parametersData.startDateTime));

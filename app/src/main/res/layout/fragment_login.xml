@@ -27,8 +27,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login" />
+            android:background="@mipmap/applable" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,19 +35,20 @@
             android:gravity="center"
             android:text="@string/system_name"
             android:textColor="@color/base_color"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:textSize="18sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/system_name0"
             android:textColor="@color/base_color"
             android:textSize="18sp" />
+
         <android.support.v7.widget.CardView
             android:layout_width="280dp"
-            android:layout_height="300dp"
+            android:layout_height="290dp"
             android:layout_marginBottom="50dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
@@ -143,14 +143,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center">
 
                     <com.shtoone.liqing.widget.processbutton.iml.ActionProcessButton
                         android:id="@+id/bt_login_fragment"
                         android:layout_width="240dp"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="13dp"
                         android:text="@string/login"
                         android:textColor="@android:color/white"
                         android:textSize="15sp"

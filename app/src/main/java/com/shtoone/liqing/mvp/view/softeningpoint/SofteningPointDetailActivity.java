@@ -92,7 +92,6 @@ public class SofteningPointDetailActivity extends BaseActivity<SofteningPointDet
     @Override
     public void loadData() {
         super.loadData();
-//        mPresenter.requestSofteningPointDetailData(f_guid);
         KLog.e(TAG,"==========loadData=============");
     }
 

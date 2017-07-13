@@ -122,7 +122,7 @@ public class AsphaltPenetrationFragment extends BaseFragment<AsphaltPenetrationC
 
         pagestatelayout.setPadding(0, 0, 0, DensityUtils.dp2px(_mActivity, 56));
         initPageStateLayout(pagestatelayout);
-
+        initPtrFrameLayout(ptrframelayout);
         initToolbarBackNavigation(toolbarToolbar);
         madapter = new AsphaltPenetrationFragmentAdapter();
         linearLayoutManager=new LinearLayoutManager(_mActivity);
@@ -211,7 +211,6 @@ public class AsphaltPenetrationFragment extends BaseFragment<AsphaltPenetrationC
     @Override
     public void onResume() {
         super.onResume();
-        initPtrFrameLayout(ptrframelayout);
     }
 
     @Override

@@ -57,7 +57,6 @@ public class LaboratoryActivity extends BaseActivity {
             mFragments[2] = DuctilityFragment.newInstance(departmentBean);
             int showPosition = 0;
             loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0], mFragments[1], mFragments[2]);
-//            loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0]);
         } else {
             mFragments[0] = findFragment(SofteningPointFragment.class);
             mFragments[1] = findFragment(AsphaltPenetrationFragment.class);
